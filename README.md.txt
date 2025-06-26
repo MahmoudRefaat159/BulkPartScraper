@@ -1,34 +1,38 @@
-# Bulk Part Scraper with Price Breaks
 
-هذا السكربت بلغة Python مصمم لتجميع بيانات قطع إلكترونية من صفحات متعددة على موقع إلكتروني باستخدام Web Scraping.
+Bulk Part Scraper with Price Breaks
+This Python script is designed to scrape electronic component data from multiple web pages using web scraping.
 
----
+📌 Script Features:
+Reads product links or part numbers from an Excel file (i.xlsx)
 
-## 📌 وظائف السكربت:
+Opens each link and analyzes the page using SeleniumBase
 
-- قراءة روابط أو أكواد منتجات من ملف Excel (`i.xlsx`)
-- فتح كل رابط وتحليل الصفحة باستخدام SeleniumBase
-- استخراج معلومات مفصلة عن كل منتج:
-  - رقم القطعة (Part Number)
-  - اسم المصنع (Manufacturer)
-  - الحالة في المخزون (Stock)
-  - رابط الشراء (Buy Now)
-  - الكمية المطلوبة والأسعار المرتبطة بها (Breaks & Prices)
-- تسجيل النتائج في ملف CSV يتم إنشاؤه تلقائيًا باسم يحمل الوقت والتاريخ
+Extracts detailed information about each product:
 
----
+Part Number
 
-## 📁 محتويات المشروع:
+Manufacturer
 
-- `IBS.py`: ملف السكربت الأساسي
-- `i.xlsx`: ملف إدخال يحتوي على روابط أو أكواد المنتجات
-- `*.csv`: ملف النتائج الناتج (يُنشأ تلقائيًا)
+Stock Availability
 
----
+Buy Now Link
 
-## 🧰 المتطلبات:
+Quantity Breaks and Corresponding Prices
 
-تأكد من تنصيب المكتبات التالية:
+Saves the results in a CSV file automatically generated with a timestamp in its name
 
-```bash
+📁 Project Contents:
+IBS.py: The main script file
+
+i.xlsx: Input Excel file containing product links or part numbers
+
+*.csv: Output results file (automatically generated)
+
+🧰 Requirements:
+Make sure the following libraries are installed:
+
+bash
+نسخ
+تحرير
 pip install pandas openpyxl seleniumbase lxml
+
